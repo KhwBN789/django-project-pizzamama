@@ -1,0 +1,23 @@
+
+<html>
+   
+    <body>
+
+        <a href="{% url 'main:index' %}">Back</a>
+
+        <h1>Register now!</h1>
+
+        <form method="POST" autocomplete="off">
+
+            {% csrf_token %}
+
+            {{registerform.as_p}}
+
+            <input type="submit" value="Register">
+
+        </form>
+
+    </body>
+
+
+</html>
